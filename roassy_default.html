@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>دردشات</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link id="siteicon" rel="shortcut icon" type="image/png" href="default_images/icon.png" />
+<link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="css/selectboxit.css" />
+<link rel="stylesheet" type="text/css" href="js/jqueryui/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="control/login/Simple/login.css" />
+<link id="gradient_sheet" rel="stylesheet" type="text/css" href="css/gradients.css" />
+<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+<link id="actual_theme" rel="stylesheet" type="text/css" href="css/themes/�����_������/�����_������.css" />
+<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+<script data-cfasync="false" src="js/jquery-1.11.2.min.js"></script>
+<script data-cfasync="false" src="system/language/Arabic/language.js"></script>
+<script data-cfasync="false" src="js/fancybox/jquery.fancybox.js"></script>
+<script data-cfasync="false" src="js/jqueryui/jquery-ui.min.js"></script>
+<script data-cfasync="false" src="js/global.min.js"></script>
+<script data-cfasync="false" src="js/function_split.js"></script>
+<script data-cfasync="false" src="js/jqueryui2/call.js"></script>
+<script data-cfasync="false" src="js/jqueryui2/v4.js"></script>
+<script data-cfasync="false" src="js/jqueryui2/sound.js"></script>
+<link rel="stylesheet" type="text/css" href="css/rtl.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<script data-cfasync="false">
+	
+	var audiocall = new Audio('/sounds/tworing.mp3');
+	var sessions = [];
+var callers = [];
+
+		var pageEmbed = 0;
+		var pageRoom = 1;
+		var curPage = 'home';
+		var loadPage = '';
+		var bbfv = '';
+		var rtlMode = '1';
+	</script>
+<script data-cfasync="false">
+		var logged = 0;
+		var utk = '0';
+		var recapt = 0;
+		var recaptKey = '';
+	</script>
+</head>
+<body>
+<audio id="myAudioradio" style="display: block;">
+<source id="myAudiosrc" src=""> </source>
+</audio>
+<script data-cfasync="false">
+
+var mobee = '0';
+var uamob = navigator.userAgent.toLowerCase();
+var isAndroid = uamob.indexOf("android") > -1; 
+var isachant =  navigator.userAgent;
+var chatagent = "Android_daradashat_9";
+if(isAndroid && chatagent == isachant ) {
+
+
+var xgent = navigator.userAgent;
+ 
+  if(mobee == 1){
+  
+  
+  
+  }else{
+  
+ window.location = "https://play.google.com/store/apps/details?id=com.daradashat.androidchat";
+      
+  }
+  
+}else{
+	
+	
+	var mobeDabase = '0';
+if(mobeDabase == 1){
+	
+}else{
+	
+	   window.location = "/updata.php";
+}
+	
+}
+
+/*
+ if( 
+  navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ ){
+
+  }
+  */
+ 
+
+
+</script>
+<div class="whaetingmmnnlog" style="z-index: 99999999999999999999;display: none;position: fixed;background: #000;color: #fff;padding: 10px;font-size: large;border-radius: 10px;margin: auto;left: 0;right: 0;top:50px;max-width: 200px;text-align: center;direction: rtl;border: 3px solid;box-shadow: 0 0 20px 5px #fff;">
+<b>يرجى الانتظار ...</b>
+</div>
+<div class="back_dark out_page_container" style="z-index: 9999;">
+<div class="out_page_content" style="z-index: 9999;">
+<div class="out_page_box">
+<div class="embed_logo_wrap">
+<img class="embed_logo" src="default_images/logo.png">
+</div>
+<div class="out_page_data pad_box" style="background: #ffffffb8;border-radius: 25px;border: 2px solid #fff;">
+<div style="margin: 10px;">
+<input type="text" id="usernamelog" maxlength="20" placeholder="اسمك المستعار ..." style="padding: 15px 20px;border-radius: 25px;width: 100%;border: 1px solid #3f3f3f !important;background: rgb(255, 255, 255);color: #000;font-weight: bold;font-size: medium;" />
+</div>
+<div style="margin: 10px;">
+<i class="i_btm fa fa-eye showpassm" style="float: left;color: #000;font-size: medium;padding: 5px;margin: 5px 5px 5px 5px;font-weight: bold;"> مشاهدة</i>
+<input type="password" id="userpasslog" placeholder="انشئ كلمة مرور ..." style="padding: 15px 20px;border-radius: 25px;width: 100%;border: 1px solid #3f3f3f !important;background: rgb(255, 255, 255);color: #000;font-weight: bold;font-size: medium;"></input>
+</div>
+<div style="margin: 10px;">
+<input type="button" value="دخــول" onclick="sendLoginlog();" style="padding: 10px 20px;border-radius: 10px;border: 1px solid #3f3f3f !important;background: #0946a4;color: #fff;font-weight: bold;font-size: large;text-shadow: 0 0 6px #07a2ff;cursor: pointer;">
+</div>
+</div>
+<div style="padding: 10px 5px;font-size: medium;margin: 10px;">
+<b>انظم الى اكثر من 2000 مستخدم من كافة البلدان</b>
+</div>
+<div id="last_embed" style="white-space: nowrap;overflow: auto;">
+<div class="active_embed">
+<img alt="نظير ألملك" title="نظير ألملك" class="active_embed_user" src="avatar/avatar_user92309_1586689495.jpg" />
+</div><div class="active_embed">
+<img alt="حسام💔" title="حسام💔" class="active_embed_user" src="avatar/avatar_user89119_1586678439.jpg" />
+</div><div class="active_embed">
+<img alt="ألـڜڜبِـحّ" title="ألـڜڜبِـحّ" class="active_embed_user" src="avatar/avatar_user84779_1586500718.jpg" />
+</div><div class="active_embed">
+<img alt="رقية التميمية" title="رقية التميمية" class="active_embed_user" src="avatar/avatar_user79002_1586335997.jpg" />
+</div><div class="active_embed">
+<img alt="⇣ۦ꙰✬حـைـ᭄مـைـﯛديۦ꙰✬⇣" title="⇣ۦ꙰✬حـைـ᭄مـைـﯛديۦ꙰✬⇣" class="active_embed_user" src="avatar/avatar_user55622_1584622738.jpg" />
+</div><div class="active_embed">
+<img alt="✮🚬 المهيب🚬✮" title="✮🚬 المهيب🚬✮" class="active_embed_user" src="avatar/avatar_user52206_1584253992.jpg" />
+</div><div class="active_embed">
+<img alt="سالى 👑" title="سالى 👑" class="active_embed_user" src="avatar/avatar_user52188_1586761958.jpg" />
+</div><div class="active_embed">
+<img alt="احمد الكربلائي" title="احمد الكربلائي" class="active_embed_user" src="avatar/avatar_user98412_1586783462.jpg" />
+</div><div class="active_embed">
+<img alt="ايـᬽــهه║☃♫👑" title="ايـᬽــهه║☃♫👑" class="active_embed_user" src="avatar/avatar_user93485_1586580043.jpg" />
+</div><div class="active_embed">
+<img alt="✬أزعـడిـرحلـைـبۦ꙰✬" title="✬أزعـడిـرحلـைـبۦ꙰✬" class="active_embed_user" src="avatar/avatar_user52796_1583546082.jpg" />
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="js/function_login.js"></script><div id="side_content" class="chat_side_panel">
+<div id="side_inside">
+</div>
+</div>
+<div id="small_modal" class="small_modal_out modal_back">
+<div class="small_modal_in modal_in">
+<div class="modal_top">
+<div class="modal_top_empty">
+</div>
+<div class="modal_top_element close_modal">
+<i class="fa fa-times"></i>
+</div>
+</div>
+<div id="small_modal_content" class="modal_content small_modal_content">
+</div>
+</div>
+</div>
+<div id="large_modal" class="large_modal_out modal_back">
+<div class="large_modal_in modal_in">
+<div id="large_modal_content" class="modal_content large_modal_content">
+</div>
+</div>
+</div>
+<div id="over_modal" class="over_modal_out modal_back">
+<div class="over_modal_in modal_in">
+<div class="modal_top">
+<div class="modal_top_empty">
+</div>
+<div class="modal_top_element close_over">
+<i class="fa fa-times"></i>
+</div>
+</div>
+<div id="over_modal_content" class="modal_content over_modal_content">
+</div>
+</div>
+</div>
+<div id="over_emodal" class="over_emodal_out modal_back">
+<div class="over_emodal_in modal_in">
+<div id="over_emodal_content" class="modal_content over_emodal_content">
+</div>
+</div>
+</div>
+<div class="saved_data">
+<span class="saved_span"></span>
+</div>
+</body>
+</html>
