@@ -1,0 +1,49 @@
+.class public final synthetic LX/1Fh;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field private final synthetic A00:LX/08T;
+
+.field private final synthetic A01:Ljava/util/Set;
+
+
+# direct methods
+.method public synthetic constructor <init>(LX/08T;Ljava/util/Set;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/1Fh;->A00:LX/08T;
+
+    iput-object p2, p0, LX/1Fh;->A01:Ljava/util/Set;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 3
+
+    iget-object v2, p0, LX/1Fh;->A00:LX/08T;
+
+    iget-object v1, p0, LX/1Fh;->A01:Ljava/util/Set;
+
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, v2, LX/08T;->A04:LX/0Af;
+
+    invoke-virtual {v0, v1}, LX/0Af;->A0A(Ljava/util/Collection;)V
+
+    :cond_0
+    return-void
+.end method
